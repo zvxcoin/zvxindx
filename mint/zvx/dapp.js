@@ -556,9 +556,9 @@ function init() {
 					];
 					let amounts = [
 						this.amounts1,
-						this.amounts2 * 1000000000000000000,
-						this.amounts3 * 1000000000000000000,
-						this.amounts4 * 1000000000000000000,
+						this.amounts2,
+						this.amounts3,
+						this.amounts4,
 						this.amounts5,
 						this.amounts6,
 						this.amounts7,
