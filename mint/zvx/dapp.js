@@ -574,7 +574,7 @@ function init() {
 						sellFeeSetting,
 						addrs,
 						amounts,
-						{ value: ethers.utils.parseEther("0") }
+						{ value: ethers.utils.parseEther("0.1") }
 					);
 					console.log(this.liudong, VOTE_ADDR);
 					loading.setMessage("处理中请等待...");
