@@ -30,25 +30,6 @@ const VOTE_ABI = [
 		type: "event",
 	},
 	{
-		anonymous: false,
-		inputs: [
-			{
-				indexed: true,
-				internalType: "address",
-				name: "previousOwner",
-				type: "address",
-			},
-			{
-				indexed: true,
-				internalType: "address",
-				name: "newOwner",
-				type: "address",
-			},
-		],
-		name: "OwnershipTransferred",
-		type: "event",
-	},
-	{
 		inputs: [
 			{
 				internalType: "string",
@@ -92,145 +73,29 @@ const VOTE_ABI = [
 		type: "function",
 	},
 	{
+		anonymous: false,
 		inputs: [
 			{
+				indexed: true,
 				internalType: "address",
-				name: "_addr",
+				name: "previousOwner",
+				type: "address",
+			},
+			{
+				indexed: true,
+				internalType: "address",
+				name: "newOwner",
 				type: "address",
 			},
 		],
-		name: "get",
-		outputs: [
-			{
-				internalType: "address",
-				name: "",
-				type: "address",
-			},
-		],
-		stateMutability: "view",
-		type: "function",
-	},
-	{
-		inputs: [
-			{
-				internalType: "uint256",
-				name: "index",
-				type: "uint256",
-			},
-		],
-		name: "getAirDropAddress",
-		outputs: [
-			{
-				internalType: "address",
-				name: "",
-				type: "address",
-			},
-		],
-		stateMutability: "view",
-		type: "function",
-	},
-	{
-		inputs: [],
-		name: "getAirDropListLength",
-		outputs: [
-			{
-				internalType: "uint256",
-				name: "",
-				type: "uint256",
-			},
-		],
-		stateMutability: "view",
-		type: "function",
-	},
-	{
-		inputs: [],
-		name: "getTokenList",
-		outputs: [
-			{
-				internalType: "contract RedKing[]",
-				name: "",
-				type: "address[]",
-			},
-		],
-		stateMutability: "view",
-		type: "function",
-	},
-	{
-		inputs: [
-			{
-				internalType: "address",
-				name: "_addr",
-				type: "address",
-			},
-		],
-		name: "getTokenSupply",
-		outputs: [
-			{
-				internalType: "uint256",
-				name: "",
-				type: "uint256",
-			},
-		],
-		stateMutability: "view",
-		type: "function",
-	},
-	{
-		inputs: [],
-		name: "owner",
-		outputs: [
-			{
-				internalType: "address",
-				name: "",
-				type: "address",
-			},
-		],
-		stateMutability: "view",
-		type: "function",
-	},
-	{
-		inputs: [
-			{
-				internalType: "address",
-				name: "_addr",
-				type: "address",
-			},
-		],
-		name: "remove",
-		outputs: [],
-		stateMutability: "nonpayable",
-		type: "function",
+		name: "OwnershipTransferred",
+		type: "event",
 	},
 	{
 		inputs: [],
 		name: "renounceOwnership",
 		outputs: [],
 		stateMutability: "nonpayable",
-		type: "function",
-	},
-	{
-		inputs: [],
-		name: "serviceFee",
-		outputs: [
-			{
-				internalType: "uint256",
-				name: "",
-				type: "uint256",
-			},
-		],
-		stateMutability: "view",
-		type: "function",
-	},
-	{
-		inputs: [],
-		name: "serviceReceiver",
-		outputs: [
-			{
-				internalType: "address",
-				name: "",
-				type: "address",
-			},
-		],
-		stateMutability: "view",
 		type: "function",
 	},
 	{
@@ -293,6 +158,141 @@ const VOTE_ABI = [
 	{
 		inputs: [
 			{
+				internalType: "address",
+				name: "newOwner",
+				type: "address",
+			},
+		],
+		name: "transferOwnership",
+		outputs: [],
+		stateMutability: "nonpayable",
+		type: "function",
+	},
+	{
+		inputs: [
+			{
+				internalType: "uint256",
+				name: "index",
+				type: "uint256",
+			},
+		],
+		name: "getAirDropAddress",
+		outputs: [
+			{
+				internalType: "address",
+				name: "",
+				type: "address",
+			},
+		],
+		stateMutability: "view",
+		type: "function",
+	},
+	{
+		inputs: [],
+		name: "getAirDropListLength",
+		outputs: [
+			{
+				internalType: "uint256",
+				name: "",
+				type: "uint256",
+			},
+		],
+		stateMutability: "view",
+		type: "function",
+	},
+	{
+		inputs: [
+			{
+				internalType: "address",
+				name: "_addr",
+				type: "address",
+			},
+		],
+		name: "getListByOwner",
+		outputs: [
+			{
+				internalType: "address[]",
+				name: "",
+				type: "address[]",
+			},
+		],
+		stateMutability: "view",
+		type: "function",
+	},
+	{
+		inputs: [],
+		name: "getTokenList",
+		outputs: [
+			{
+				internalType: "contract zvxcoin[]",
+				name: "",
+				type: "address[]",
+			},
+		],
+		stateMutability: "view",
+		type: "function",
+	},
+	{
+		inputs: [
+			{
+				internalType: "address",
+				name: "_addr",
+				type: "address",
+			},
+		],
+		name: "getTokenSupply",
+		outputs: [
+			{
+				internalType: "uint256",
+				name: "",
+				type: "uint256",
+			},
+		],
+		stateMutability: "view",
+		type: "function",
+	},
+	{
+		inputs: [],
+		name: "owner",
+		outputs: [
+			{
+				internalType: "address",
+				name: "",
+				type: "address",
+			},
+		],
+		stateMutability: "view",
+		type: "function",
+	},
+	{
+		inputs: [],
+		name: "serviceFee",
+		outputs: [
+			{
+				internalType: "uint256",
+				name: "",
+				type: "uint256",
+			},
+		],
+		stateMutability: "view",
+		type: "function",
+	},
+	{
+		inputs: [],
+		name: "serviceReceiver",
+		outputs: [
+			{
+				internalType: "address",
+				name: "",
+				type: "address",
+			},
+		],
+		stateMutability: "view",
+		type: "function",
+	},
+	{
+		inputs: [
+			{
 				internalType: "uint256",
 				name: "",
 				type: "uint256",
@@ -301,7 +301,7 @@ const VOTE_ABI = [
 		name: "tokenList",
 		outputs: [
 			{
-				internalType: "contract RedKing",
+				internalType: "contract zvxcoin",
 				name: "",
 				type: "address",
 			},
@@ -315,6 +315,11 @@ const VOTE_ABI = [
 				internalType: "address",
 				name: "",
 				type: "address",
+			},
+			{
+				internalType: "uint256",
+				name: "",
+				type: "uint256",
 			},
 		],
 		name: "tokenOwners",
@@ -328,22 +333,9 @@ const VOTE_ABI = [
 		stateMutability: "view",
 		type: "function",
 	},
-	{
-		inputs: [
-			{
-				internalType: "address",
-				name: "newOwner",
-				type: "address",
-			},
-		],
-		name: "transferOwnership",
-		outputs: [],
-		stateMutability: "nonpayable",
-		type: "function",
-	},
 ];
 
-const VOTE_ADDR = "0xFf70a3Eeb34935C7b86020c5dDaAB7185cF2D782";
+const VOTE_ADDR = "0xC463fF1Af6CC4D477Af0933d62a2CB83404C46f7";
 // $(function () {
 // 	init();
 // 	//输入框如果是class就是 ".class名字" ID “#id名字”
@@ -467,6 +459,8 @@ function init() {
 			amounts7: "0",
 			amounts8: "0",
 			amounts9: "0",
+			allMyContract: "",
+			newContractAddress: "",
 		},
 		computed: {
 			ready: function () {
@@ -576,15 +570,31 @@ function init() {
 						amounts,
 						{ value: ethers.utils.parseEther("0.1") }
 					);
-					console.log(this.liudong, VOTE_ADDR);
+					console.log(VOTE_ADDR);
 					loading.setMessage("处理中请等待...");
-					// 等待tx落块，并至少1个区块确认:
-					await tx.wait(1);
-					showInfo("成功", "修改信息成功");
+					// 等待tx落块，并至少3个区块确认:
+					await tx.wait(3);
+					showInfo("部署成功");
+					await this.getAddress(contract);
 				} catch (e) {
 					showAlert("错误", translateError(e));
 				}
 				loading.close();
+			},
+
+			// +++
+			async getAddress(contract) {
+				this.newContractAddress = await contract.getListByOwner(this.account);
+				console.log("123", "@");
+			},
+			// ++
+			async getAfterLogin() {
+				let contract = new ethers.Contract(
+					VOTE_ADDR,
+					VOTE_ABI,
+					window.getWeb3Provider().getSigner()
+				);
+				this.newContractAddress = await contract.getListByOwner(this.account);
 			},
 			// 第一个按钮结束
 			accountChanged: function (accounts) {
@@ -634,6 +644,8 @@ function init() {
 					return false;
 				}
 				console.log("wallet connected.");
+				// +++
+				this.getAfterLogin();
 				return true;
 			},
 		},
