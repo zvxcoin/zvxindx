@@ -304,7 +304,7 @@ const VOTE_ABI = [
 	},
 ];
 
-const VOTE_ADDR = "0xfbbe62FA684D2C03F046Ad22688E23b9792ec88E";
+const VOTE_ADDR = "0x6Ec6ad637929c3fEd7e2C6a88780e65217d5989d";
 // $(function () {
 // 	init();
 // 	//输入框如果是class就是 ".class名字" ID “#id名字”
