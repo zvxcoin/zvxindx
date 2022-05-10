@@ -38,8 +38,8 @@ let enmain = [
 	`coming soon...`,
 ];
 
-let cnfooter = [`合作夥伴：`, ` 聯繫我們：`, `https：//t.me/ZVX_Official`];
-let enfooter = [`our partners：`, `contact us：`, `https：//t.me/ZVX_Official`];
+let cnfooter = [`合作夥伴：`, ` 聯繫我們：`, `https://t.me/ZVX_Official`];
+let enfooter = [`our partners：`, `contact us：`, `https://t.me/ZVX_Official`];
 
 let cnmint = [`ZVX協議多功能代幣`, `erc20協議基礎代幣`, `網絡切換`];
 let enmint = [`ZVX functional token`, `erc20  token`, `network selection`];
