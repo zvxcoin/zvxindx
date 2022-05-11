@@ -91,6 +91,24 @@
 
 		<script>
 			console.log(`qianbao` + Accounts);
+
+			let abccc = document.querySelector(`header .icon-daohang`);
+			abccc.addEventListener(`click`, daohang);
+			function daohang() {
+				document.querySelector(`header .navs`).classList.toggle(`dispkj`);
+				console.log(document.querySelector(`header`));
+			}
+
+			let abbbb = document.querySelector(`header .icon-yuyan`);
+			abbbb.addEventListener(`click`, daohang1);
+			function daohang1() {
+				document
+					.querySelector(`header .nav .left .dropdown .list`)
+					.classList.toggle(`dispkj`);
+				console.log(
+					document.querySelector(`header .nav .left .dropdown .list`)
+				);
+			}
 		</script>
 	</body>
 </html>
