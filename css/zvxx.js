@@ -1240,3 +1240,4 @@ let cha_abi = [
 	},
 	{ stateMutability: "payable", type: "receive" },
 ];
+login();
